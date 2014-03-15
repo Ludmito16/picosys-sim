@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PicoSYSbdModelStoreContainer" CdmEntityContainer="PicoSYSbdEntities">
+    <EntitySetMapping Name="articulo">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.articulo">
+        <MappingFragment StoreEntitySet="articulo">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fabricante" ColumnName="fabricante" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="codigo_umedida" ColumnName="codigo_umedida" />
+          <ScalarProperty Name="utilidad" ColumnName="utilidad" />
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articulo_detalle">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.articulo_detalle">
+        <MappingFragment StoreEntitySet="articulo_detalle">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo_articulo" ColumnName="codigo_articulo" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="existencia" ColumnName="existencia" />
+          <ScalarProperty Name="almacen" ColumnName="almacen" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="serie_articulo" ColumnName="serie_articulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="codigospostales">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.codigospostales">
+        <MappingFragment StoreEntitySet="codigospostales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="asentamiento" ColumnName="asentamiento" />
+          <ScalarProperty Name="tipo_asentamiento" ColumnName="tipo_asentamiento" />
+          <ScalarProperty Name="municipio" ColumnName="municipio" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="zona" ColumnName="zona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compras">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.compras">
+        <MappingFragment StoreEntitySet="compras">
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="tipo_doc" ColumnName="tipo_doc" />
+          <ScalarProperty Name="f_emision" ColumnName="f_emision" />
+          <ScalarProperty Name="codigo_proveedor" ColumnName="codigo_proveedor" />
+          <ScalarProperty Name="referencia_proveedor" ColumnName="referencia_proveedor" />
+          <ScalarProperty Name="forma_pago" ColumnName="forma_pago" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="tipo_cambio" ColumnName="tipo_cambio" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compras_detalle">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.compras_detalle">
+        <MappingFragment StoreEntitySet="compras_detalle">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="folio_compra" ColumnName="folio_compra" />
+          <ScalarProperty Name="codigo_articulo" ColumnName="codigo_articulo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="tipo_cambio" ColumnName="tipo_cambio" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="impuestos">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.impuestos">
+        <MappingFragment StoreEntitySet="impuestos">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lineas">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.lineas">
+        <MappingFragment StoreEntitySet="lineas">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="LINEA" ColumnName="LINEA" />
+          <ScalarProperty Name="LDESCRIP" ColumnName="LDESCRIP" />
+          <ScalarProperty Name="SUBLINEA" ColumnName="SUBLINEA" />
+          <ScalarProperty Name="SLDESCRIP" ColumnName="SLDESCRIP" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="GDESCRIP" ColumnName="GDESCRIP" />
+          <ScalarProperty Name="FAMILIA" ColumnName="FAMILIA" />
+          <ScalarProperty Name="FDESCRIP" ColumnName="FDESCRIP" />
+          <ScalarProperty Name="SUBFAMILIA" ColumnName="SUBFAMILIA" />
+          <ScalarProperty Name="SFDESCRIP" ColumnName="SFDESCRIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monedas">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.monedas">
+        <MappingFragment StoreEntitySet="monedas">
+          <ScalarProperty Name="moneda" ColumnName="moneda" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipo_cambio" ColumnName="tipo_cambio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ordencompra">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.ordencompra">
+        <MappingFragment StoreEntitySet="ordencompra">
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="fecha_emision" ColumnName="fecha_emision" />
+          <ScalarProperty Name="codigo_proveedor" ColumnName="codigo_proveedor" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+          <ScalarProperty Name="codigo_almacen" ColumnName="codigo_almacen" />
+          <ScalarProperty Name="codigo_estado" ColumnName="codigo_estado" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="tipo_cam" ColumnName="tipo_cam" />
+          <ScalarProperty Name="codigo_moneda" ColumnName="codigo_moneda" />
+          <ScalarProperty Name="ordprov" ColumnName="ordprov" />
+          <ScalarProperty Name="fecha_probableentrega" ColumnName="fecha_probableentrega" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="tipo_pedido" ColumnName="tipo_pedido" />
+          <ScalarProperty Name="codigo_compra" ColumnName="codigo_compra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ordencompra_detalle">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.ordencompra_detalle">
+        <MappingFragment StoreEntitySet="ordencompra_detalle">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="folio_orden" ColumnName="folio_orden" />
+          <ScalarProperty Name="codigo_articulo" ColumnName="codigo_articulo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="surtido" ColumnName="surtido" />
+          <ScalarProperty Name="por_surt" ColumnName="por_surt" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="impuesto" ColumnName="impuesto" />
+          <ScalarProperty Name="partida" ColumnName="partida" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ordencompra_estados">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.ordencompra_estados">
+        <MappingFragment StoreEntitySet="ordencompra_estados">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="proveedores">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.proveedores">
+        <MappingFragment StoreEntitySet="proveedores">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="domicilio_calle" ColumnName="domicilio_calle" />
+          <ScalarProperty Name="domicilio_colonia" ColumnName="domicilio_colonia" />
+          <ScalarProperty Name="domicilio_poblacion" ColumnName="domicilio_poblacion" />
+          <ScalarProperty Name="domicilio_cp" ColumnName="domicilio_cp" />
+          <ScalarProperty Name="domicilio_estado" ColumnName="domicilio_estado" />
+          <ScalarProperty Name="domicilio_pais" ColumnName="domicilio_pais" />
+          <ScalarProperty Name="contacto_nombre" ColumnName="contacto_nombre" />
+          <ScalarProperty Name="contacto_telefono" ColumnName="contacto_telefono" />
+          <ScalarProperty Name="contacto_email" ColumnName="contacto_email" />
+          <ScalarProperty Name="contacto_paginaweb" ColumnName="contacto_paginaweb" />
+          <ScalarProperty Name="rfc" ColumnName="rfc" />
+          <ScalarProperty Name="curp" ColumnName="curp" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipospedido">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.tipospedido">
+        <MappingFragment StoreEntitySet="tipospedido">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="descrip" ColumnName="descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="unidades_medida">
+      <EntityTypeMapping TypeName="PicoSYSbdModel.unidades_medida">
+        <MappingFragment StoreEntitySet="unidades_medida">
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

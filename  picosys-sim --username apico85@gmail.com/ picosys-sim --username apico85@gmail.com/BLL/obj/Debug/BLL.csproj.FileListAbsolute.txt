@@ -1,0 +1,11 @@
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\BLL.dll
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\BLL.pdb
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\obj\Debug\BLL.dll
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\obj\Debug\BLL.pdb
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\DAL.dll
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\Entidades.dll
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\DAL.pdb
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\Entidades.pdb
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\EntityFramework.dll
+C:\Users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\EntityFramework.xml
