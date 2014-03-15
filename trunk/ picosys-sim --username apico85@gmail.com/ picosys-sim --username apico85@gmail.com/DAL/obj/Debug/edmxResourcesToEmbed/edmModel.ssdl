@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PicoSYSbdModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PicoSYSbdModelStoreContainer">
+    <EntitySet Name="articulo" EntityType="PicoSYSbdModel.Store.articulo" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="articulo_detalle" EntityType="PicoSYSbdModel.Store.articulo_detalle" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="codigospostales" EntityType="PicoSYSbdModel.Store.codigospostales" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="compras" EntityType="PicoSYSbdModel.Store.compras" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="compras_detalle" EntityType="PicoSYSbdModel.Store.compras_detalle" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="impuestos" EntityType="PicoSYSbdModel.Store.impuestos" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="lineas" EntityType="PicoSYSbdModel.Store.lineas" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="monedas" EntityType="PicoSYSbdModel.Store.monedas" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="ordencompra" EntityType="PicoSYSbdModel.Store.ordencompra" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="ordencompra_detalle" EntityType="PicoSYSbdModel.Store.ordencompra_detalle" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="ordencompra_estados" EntityType="PicoSYSbdModel.Store.ordencompra_estados" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="proveedores" EntityType="PicoSYSbdModel.Store.proveedores" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="tipospedido" EntityType="PicoSYSbdModel.Store.tipospedido" store:Type="Tables" Schema="PicoSYSbd" />
+    <EntitySet Name="unidades_medida" EntityType="PicoSYSbdModel.Store.unidades_medida" store:Type="Tables" Schema="PicoSYSbd" />
+  </EntityContainer>
+  <EntityType Name="articulo">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="70" />
+    <Property Name="fabricante" Type="varchar" MaxLength="50" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="categoria" Type="varchar" MaxLength="50" />
+    <Property Name="codigo_umedida" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="utilidad" Type="double" Nullable="false" />
+    <Property Name="moneda" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="observacion" Type="text" />
+  </EntityType>
+  <EntityType Name="articulo_detalle">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="codigo_articulo" Type="bigint" Nullable="false" />
+    <Property Name="costo" Type="double" Nullable="false" />
+    <Property Name="existencia" Type="double" Nullable="false" />
+    <Property Name="almacen" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ubicacion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="serie_articulo" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="codigospostales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="asentamiento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="tipo_asentamiento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="municipio" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="zona" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="compras">
+    <Key>
+      <PropertyRef Name="folio" />
+    </Key>
+    <Property Name="folio" Type="bigint" Nullable="false" />
+    <Property Name="tipo_doc" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="f_emision" Type="datetime" Nullable="false" />
+    <Property Name="codigo_proveedor" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="referencia_proveedor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="forma_pago" Type="varchar" MaxLength="50" />
+    <Property Name="importe" Type="double" Nullable="false" />
+    <Property Name="tipo_cambio" Type="double" Nullable="false" />
+    <Property Name="estado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="observacion" Type="text" />
+  </EntityType>
+  <EntityType Name="compras_detalle">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="folio_compra" Type="int" Nullable="false" />
+    <Property Name="codigo_articulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="cantidad" Type="double" Nullable="false" />
+    <Property Name="precio" Type="double" Nullable="false" />
+    <Property Name="tipo_cambio" Type="double" Nullable="false" />
+    <Property Name="observacion" Type="text" />
+  </EntityType>
+  <EntityType Name="impuestos">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="valor" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lineas">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="LINEA" Type="char" MaxLength="6" />
+    <Property Name="LDESCRIP" Type="varchar" MaxLength="49" />
+    <Property Name="SUBLINEA" Type="char" MaxLength="6" />
+    <Property Name="SLDESCRIP" Type="varchar" MaxLength="49" />
+    <Property Name="GRUPO" Type="char" MaxLength="6" />
+    <Property Name="GDESCRIP" Type="varchar" MaxLength="60" />
+    <Property Name="FAMILIA" Type="char" MaxLength="6" />
+    <Property Name="FDESCRIP" Type="varchar" MaxLength="49" />
+    <Property Name="SUBFAMILIA" Type="char" MaxLength="6" />
+    <Property Name="SFDESCRIP" Type="varchar" MaxLength="49" />
+  </EntityType>
+  <EntityType Name="monedas">
+    <Key>
+      <PropertyRef Name="moneda" />
+    </Key>
+    <Property Name="moneda" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="tipo_cambio" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ordencompra">
+    <Key>
+      <PropertyRef Name="folio" />
+    </Key>
+    <Property Name="folio" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_emision" Type="datetime" Nullable="false" />
+    <Property Name="codigo_proveedor" Type="char" Nullable="false" MaxLength="6" />
+    <Property Name="impuesto" Type="double" Nullable="false" />
+    <Property Name="codigo_almacen" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="codigo_estado" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="observacion" Type="text" />
+    <Property Name="tipo_cam" Type="double" Nullable="false" />
+    <Property Name="codigo_moneda" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="ordprov" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_probableentrega" Type="datetime" Nullable="false" />
+    <Property Name="tipo" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="tipo_pedido" Type="int" Nullable="false" />
+    <Property Name="codigo_compra" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ordencompra_detalle">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="folio_orden" Type="bigint" Nullable="false" />
+    <Property Name="codigo_articulo" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="cantidad" Type="double" Nullable="false" />
+    <Property Name="surtido" Type="double" Nullable="false" />
+    <Property Name="por_surt" Type="double" Nullable="false" />
+    <Property Name="precio" Type="double" Nullable="false" />
+    <Property Name="impuesto" Type="double" Nullable="false" />
+    <Property Name="partida" Type="bigint" Nullable="false" />
+    <Property Name="observacion" Type="text" />
+  </EntityType>
+  <EntityType Name="ordencompra_estados">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="descrip" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="domicilio_calle" Type="varchar" MaxLength="50" />
+    <Property Name="domicilio_colonia" Type="varchar" MaxLength="50" />
+    <Property Name="domicilio_poblacion" Type="varchar" MaxLength="50" />
+    <Property Name="domicilio_cp" Type="varchar" MaxLength="50" />
+    <Property Name="domicilio_estado" Type="varchar" MaxLength="50" />
+    <Property Name="domicilio_pais" Type="varchar" MaxLength="50" />
+    <Property Name="contacto_nombre" Type="varchar" MaxLength="50" />
+    <Property Name="contacto_telefono" Type="varchar" MaxLength="50" />
+    <Property Name="contacto_email" Type="varchar" MaxLength="50" />
+    <Property Name="contacto_paginaweb" Type="varchar" MaxLength="50" />
+    <Property Name="rfc" Type="varchar" MaxLength="50" />
+    <Property Name="curp" Type="varchar" MaxLength="50" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" />
+    <Property Name="observacion" Type="text" />
+  </EntityType>
+  <EntityType Name="tipospedido">
+    <Key>
+      <PropertyRef Name="codigo" />
+    </Key>
+    <Property Name="codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descrip" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="unidades_medida">
+    <Key>
+      <PropertyRef Name="unidad" />
+    </Key>
+    <Property Name="unidad" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="descripcion" Type="varchar" MaxLength="20" />
+  </EntityType>
+</Schema>
