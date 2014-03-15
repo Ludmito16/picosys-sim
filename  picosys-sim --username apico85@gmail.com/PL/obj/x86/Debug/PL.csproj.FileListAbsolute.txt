@@ -1,0 +1,6 @@
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\bin\Debug\PL.exe
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\bin\Debug\PL.pdb
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\obj\x86\Debug\PL.Properties.Resources.resources
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\obj\x86\Debug\PL.csproj.GenerateResource.Cache
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\obj\x86\Debug\PL.exe
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\PL\obj\x86\Debug\PL.pdb

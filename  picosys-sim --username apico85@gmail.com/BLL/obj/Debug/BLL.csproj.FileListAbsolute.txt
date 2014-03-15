@@ -1,0 +1,4 @@
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\BLL.dll
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\bin\Debug\BLL.pdb
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\obj\Debug\BLL.dll
+c:\users\apico\documents\visual studio 2010\Projects\picosys-sim\BLL\obj\Debug\BLL.pdb
